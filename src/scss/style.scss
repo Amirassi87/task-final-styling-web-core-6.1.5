@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import './base/_fonts.scss';
 @import './base/_colors.scss';
 @import './layouts/_header.scss';
@@ -45,4 +46,22 @@ body {
     padding: 0;
     overflow-y: auto;
   }
+=======
+$bgColor: #24292e;
+$text: #fff;
+
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  padding: 1rem;
+  margin: 0;
+  font-family: Comic, sans-serif;
+  background-color: $bgColor;
+  color: $text;
+>>>>>>> 8e973de105bffc901698cd61e2d454c4c22ef4b6
 }
