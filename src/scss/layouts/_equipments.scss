@@ -1,0 +1,127 @@
+/* equipments */
+.equipments {
+  &__header {
+    width: 100%;
+    height: auto;
+    background-color: $bgColor;
+    padding: 16px 16px;
+
+    &__para {
+      margin: 0;
+      text-transform: uppercase;
+      color: $components_bgColor;
+
+      &--font-16 {
+        font-size: 1rem;
+      }
+    }
+  }
+  &__btn {
+    display: none;
+  }
+
+  .swiper-slide {
+    border: solid 2px $borderColor;
+    background-color: $bgColor;
+    width: 240px !important;
+    height: 160px !important;
+    border-radius: 5px;
+    margin: 15px 0px 0px 22px;
+
+    &--d--flex {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    & p {
+      display: inline-block;
+      margin-left: 1em;
+    }
+
+    &__link {
+      display: block;
+      object-fit: none;
+      width: 35%;
+      align-self: flex-end;
+    }
+  }
+
+  .swiper {
+    max-width: 100%;
+    width: 100%;
+    height: 230px;
+  }
+
+  .swiper-wrapper {
+    max-width: 480px;
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .equipments {
+    .swiper {
+      max-width: 1023px;
+      width: 100% !important;
+      height: 11.875em;
+    }
+
+    .swiper-slide {
+      max-width: 224px;
+      height: 160px !important;
+    }
+
+    .swiper-wrapper {
+      max-width: 1023px;
+      width: 100% !important;
+
+      &--d--flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &__btn {
+      display: block;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .equipments-header {
+    min-width: 1024px;
+    max-width: 3000px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 16px 16px;
+  }
+
+  .equipments {
+    &__btn {
+      display: block;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    .swiper {
+      min-width: 1024px;
+      max-width: 3000px;
+      width: 100% !important;
+      height: 11.875em;
+    }
+
+    .swiper-wrapper {
+      min-width: 1024px;
+      max-width: 3000px;
+      width: 100% !important;
+
+      &--d--flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

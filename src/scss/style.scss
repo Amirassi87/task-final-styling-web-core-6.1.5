@@ -1,17 +1,48 @@
-$bgColor: #24292e;
-$text: #fff;
-
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import './base/_fonts.scss';
+@import './base/_colors.scss';
+@import './layouts/_header.scss';
+@import './layouts/_menu.scss';
+@import './layouts/_about_us.scss';
+@import './layouts/_brands.scss';
+@import './layouts/_equipments.scss';
+@import './layouts/_services.scss';
+@import './layouts/_copyrights.scss';
+@import './layouts/_feedback.scss';
+@import './layouts/_order_call.scss';
+@import './layouts/_prices.scss';
 
 body {
-  padding: 1rem;
+  max-width: 480px;
+  height: auto;
+  font-family: 'Roboto', sans-serif;
+  background-color: $body_bgColor;
   margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+  padding: 0;
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  body {
+    max-width: 100%;
+    min-width: 481px;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: $body_bgColor;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 100%;
+    min-width: 1023px;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: $body_bgColor;
+    padding: 0;
+    overflow-y: auto;
+  }
 }

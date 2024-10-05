@@ -1,22 +1,23 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   // Entry file
   entry: [
-    './src/js/index.js'
+    path.resolve(__dirname, './src/js/index.js'),
+    path.resolve(__dirname, './src/scss/style.scss')
   ],
 
-  // Output file
+  // output file
   output: {
-    filename: './js/bundle.js',
-    path: path.resolve(__dirname, 'dist') // Add output path
+    path: path.resolve(__dirname, 'dist'),
+    filename: './js/bundle.js'
   },
 
   // Source maps for easier debugging
-  devtool: "source-map",
+  devtool: 'source-map',
 
   module: {
     rules: [
@@ -28,7 +29,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ['@babel/preset-env']
           }
         }
       },
@@ -40,8 +41,13 @@ module.exports = {
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS
           'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
-        ],
+          'sass-loader' // compiles Sass to CSS, using Node Sass by default
+        ]
+      },
+
+      {
+        test: /\.css$/,
+        use: ['style-loader']
       },
 
       // Include fonts from css
@@ -60,24 +66,24 @@ module.exports = {
         generator: {
           filename: 'static/[name][ext]'
         }
-      },
-    ],
+      }
+    ]
   },
   plugins: [
     // Include html file, styles and scripts will be automatically injected
     new HtmlWebpackPlugin({
-      title: 'Webpack 5 Starter',
+      title: 'CBS FINAL',
       template: './src/index.html',
       inject: true,
       minify: {
         removeComments: true,
-        collapseWhitespace: false,
+        collapseWhitespace: false
       }
     }),
 
     // Extract styles to a separate file
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: 'style.css'
     }),
 
     // Copy images
@@ -85,8 +91,8 @@ module.exports = {
       patterns: [
         {
           from: './src/img',
-          to: 'img',
-        },
+          to: 'img'
+        }
       ]
     })
   ],
@@ -96,10 +102,10 @@ module.exports = {
     port: 9000,
     hot: true, // Enable Hot Module Replacement
     watchFiles: {
-      paths: ['src/**/*'], // Watch for changes in source files
+      paths: ['src/**/*'] // Watch for changes in source files
     },
     client: {
       overlay: true // Show errors and warnings in the browser
     }
-  },
-};
+  }
+}
