@@ -107,20 +107,25 @@
     }
 
     .swiper {
-      min-width: 1024px;
+      min-width: 740px;
       max-width: 3000px;
       width: 100% !important;
       height: 11.875em;
     }
 
     .swiper-wrapper {
-      min-width: 1024px;
+      min-width: 740px;
       max-width: 3000px;
       width: 100% !important;
 
       &--d--flex {
         display: flex;
         flex-wrap: wrap;
+      }
+
+      & .swiper-slide {
+        width: 224px;
+        height: 160px !important;
       }
     }
   }

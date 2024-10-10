@@ -91,7 +91,7 @@
 
 @media screen and (min-width: 1024px) {
   .brands-header {
-    min-width: 1024px;
+    min-width: 740px;
     max-width: 3000px;
     width: 100%;
     background-color: $bgColor;
@@ -100,7 +100,7 @@
 
   .brands {
     .swiper {
-      min-width: 1024px;
+      min-width: 740px;
       max-width: 3000px;
       width: 100% !important;
       height: 11.875em;
@@ -113,7 +113,7 @@
     }
 
     & .swiper-wrapper {
-      min-width: 1024px;
+      min-width: 740px;
       max-width: 3000px;
       width: 100% !important;
 
@@ -121,6 +121,11 @@
         display: flex;
         flex-wrap: wrap;
       }
+    }
+
+    & .swiper-slide {
+      width: 224px;
+      height: 72px !important;
     }
   }
 }

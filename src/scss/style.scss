@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 @import './base/_fonts.scss';
 @import './base/_colors.scss';
+@import './layouts/_main.scss';
+@import './layouts/_container.scss';
 @import './layouts/_header.scss';
 @import './layouts/_menu.scss';
 @import './layouts/_about_us.scss';
@@ -20,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 481px) and (max-width: 1023px) {
@@ -32,36 +34,20 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: auto;
-    box-sizing: border-box;
+    overflow-x: hidden;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body {
-    max-width: 100%;
-    min-width: 1023px;
+    //max-width: 100%;
+    //margin: 100px;
+    min-width: 1024px;
     height: auto;
     font-family: 'Roboto', sans-serif;
     background-color: $body_bgColor;
-    padding: 0;
+    //padding: 0;
     overflow-y: auto;
+    overflow-x: hidden;
   }
-=======
-$bgColor: #24292e;
-$text: #fff;
-
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
->>>>>>> 8e973de105bffc901698cd61e2d454c4c22ef4b6
 }

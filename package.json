@@ -40,10 +40,7 @@
     "postcss-loader": "^7.3.3",
     "sass": "^1.78.0",
     "sass-loader": "^13.3.1",
-<<<<<<< HEAD
     "style-loader": "^4.0.0",
-=======
->>>>>>> 8e973de105bffc901698cd61e2d454c4c22ef4b6
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
@@ -57,11 +54,8 @@
     "plugins": {
       "autoprefixer": {}
     }
-<<<<<<< HEAD
   },
   "dependencies": {
     "swiper": "^11.1.14"
-=======
->>>>>>> 8e973de105bffc901698cd61e2d454c4c22ef4b6
   }
 }

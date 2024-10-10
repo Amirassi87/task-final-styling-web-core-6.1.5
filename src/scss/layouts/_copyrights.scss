@@ -1,0 +1,80 @@
+/* Copyrights */
+.footer {
+  text-align: center;
+  font-size: 0.9rem !important;
+  color: $components_bgColor;
+  margin-top: 5em;
+  margin-bottom: 1em;
+
+  &--d--flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .footer {
+    font-size: 0.8rem !important;
+    color: $components_bgColor;
+    margin-top: 5em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    &--d--flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 8em;
+    }
+
+    &__copyright {
+      text-align: left;
+      width: 30%;
+    }
+
+    &__privacy-policy {
+      text-align: center;
+      width: 30%;
+    }
+    &__disclaimers {
+      text-align: right;
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    font-size: 0.8rem !important;
+    color: $components_bgColor;
+    margin-top: 5em;
+    margin-bottom: 1em;
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+
+    &--d--flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 8em;
+    }
+
+    &__copyright {
+      text-align: left;
+      width: 25%;
+    }
+
+    &__privacy-policy {
+      text-align: center;
+      width: 47%;
+    }
+
+    &__disclaimers {
+      text-align: right;
+      width: 27%;
+    }
+  }
+}

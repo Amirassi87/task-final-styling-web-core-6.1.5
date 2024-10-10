@@ -1,0 +1,30 @@
+/* Container */
+.container {
+  & &--position--relative {
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .container {
+    & &--position--relative {
+      position: relative;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 100%;
+
+    & &--d--flex {
+      display: flex;
+      flex-direction: row;
+    }
+
+    & &--position--relative {
+      position: relative;
+    }
+  }
+}

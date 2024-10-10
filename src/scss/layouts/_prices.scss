@@ -17,6 +17,11 @@
     }
   }
 
+  &__title {
+    position: fixed !important;
+    left: -1000px;
+  }
+
   & .swiper-slide {
     border: solid 2px $borderColor;
     background-color: $bgColor;
@@ -28,11 +33,6 @@
     &--d--flex {
       display: flex !important;
       flex-direction: column;
-    }
-
-    &:nth-child(1) {
-      position: fixed !important;
-      left: -1000px;
     }
 
     & .swiper-slide__item {
@@ -54,7 +54,7 @@
       }
 
       &__content {
-        color: $item_text_color;
+        color: $info_text_color;
         font-size: 0.7rem;
         margin: 0;
         padding: 0;
@@ -78,10 +78,61 @@
     max-width: 480px;
     width: 100% !important;
   }
+
+  &__footer {
+    margin-left: 1em;
+    margin-right: 1em;
+
+    &__info {
+      font-size: 0.9rem;
+      color: $info_text_color;
+      margin-bottom: 3em;
+    }
+    &__req-offer {
+      font-size: 1rem;
+      color: $info_text_color;
+      font-weight: bold;
+
+      & img {
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 1023px) {
   .prices {
+    &__title {
+      position: static !important;
+      margin-left: 2.3em;
+      background-color: $body_bgColor;
+
+      &--d--flex {
+        display: flex;
+      }
+
+      &__item {
+        font-size: 0.9rem;
+        color: $components_bgColor;
+        margin-top: 1.5em;
+        margin-left: 1.5em;
+
+        &:nth-child(2) {
+          margin-left: 8em !important;
+        }
+
+        &:nth-child(3) {
+          margin-right: 11em !important;
+        }
+      }
+
+      &__item--grow--1 {
+        flex-grow: 1;
+      }
+    }
+
     & .swiper {
       max-width: 1023px;
       width: 100% !important;
@@ -89,10 +140,12 @@
     }
 
     & .swiper-wrapper {
-      max-width: 1023px;
+      min-width: 95%;
       width: 100% !important;
       background-color: $bgColor;
-      margin: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 20px;
 
       &--d--flex {
         display: flex;
@@ -112,10 +165,6 @@
         border-color: transparent;
       }
 
-      &:nth-child(1) {
-        position: static !important;
-      }
-
       &--d--flex {
         display: flex !important;
         flex-direction: row;
@@ -132,13 +181,37 @@
           justify-content: space-between;
           gap: 100px;
         }
+
+        &__title {
+          display: none;
+        }
+      }
+    }
+
+    &__footer {
+      &__info {
+        font-size: 0.9rem;
+        color: $info_text_color;
+        margin-bottom: 3em;
+        width: 57%;
+      }
+      &__req-offer {
+        font-size: 1rem;
+        color: $info_text_color;
+        font-weight: bold;
+        width: 70%;
+      }
+      & img {
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
       }
     }
   }
 }
 @media screen and (min-width: 1024px) {
   .prices-header {
-    min-width: 1024px;
+    min-width: 740px;
     max-width: 3000px;
     width: 100%;
     background-color: #ffffff;
@@ -146,19 +219,51 @@
   }
 
   .prices {
+    min-width: 740px;
+    width: 100%;
+
+    &__title {
+      position: static !important;
+      //margin-left: 2.5em;
+      background-color: $body_bgColor;
+
+      &--d--flex {
+        display: flex;
+      }
+
+      &__item {
+        font-size: 0.9rem;
+        color: $components_bgColor;
+        margin-top: 1.5em;
+        margin-left: 4.5em;
+        margin-bottom: 1.5em;
+
+        &:nth-child(2) {
+          margin-left: 17% !important;
+        }
+
+        &:nth-child(3) {
+          margin-right: 2% !important;
+        }
+      }
+      &__item--grow--1 {
+        flex-grow: 1;
+      }
+    }
     & .swiper {
-      min-width: 1024px;
-      max-width: 3000px;
-      width: 100% !important;
+      //min-width: 740px;
+      //max-width: 3000px;
+      width: 95% !important;
       //height: 11.875em;
       height: auto;
     }
 
     & .swiper-wrapper {
-      min-width: 1024px;
+      min-width: 98%;
       width: 100% !important;
       background-color: $bgColor;
-      margin: 20px;
+      margin-bottom: 20px;
+      //margin-left: 20px;
 
       &--d--flex {
         display: flex;
@@ -192,12 +297,7 @@
         margin-right: 1.5em;
 
         &__title {
-          position: fixed;
-          left: -1000px;
-        }
-
-        &__title:nth-child(1) {
-          position: static;
+          display: none;
         }
 
         &--d--flex {
@@ -205,6 +305,21 @@
           justify-content: space-between;
           gap: 100px;
         }
+      }
+    }
+
+    &__footer {
+      width: 57%;
+
+      &__info {
+        font-size: 0.9rem;
+        color: $info_text_color;
+        margin-bottom: 3em;
+      }
+      &__req-offer {
+        font-size: 1rem;
+        color: $info_text_color;
+        font-weight: bold;
       }
     }
   }
