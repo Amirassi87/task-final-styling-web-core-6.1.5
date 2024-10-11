@@ -11,117 +11,113 @@
   </head>
   <body>
     <!--- container --->
+    <!--- order call modal --->
+    <div
+      id="order-call"
+      class="order-call order-call--shadow-box order-call--d--flex order-call--position--absolute"
+    >
+      <div class="order-call__header">
+        <a
+          onclick="closeOrderCall(this)"
+          href="#"
+          class="order-call__img-link order-call__img-link--d--block"
+        >
+          <img
+            class="order-call__img"
+            src="img/delete-call.png"
+            alt="delete-icon"
+          />
+        </a>
+      </div>
+      <div class="order-call__item">
+        <span class="order-call__vertical-line"></span>
+        <a href="#" class="order-call__btn order-call__btn--d--block"
+          >Order Call</a
+        >
+      </div>
+      <div class="order-call__phone">
+        <input
+          placeholder="Phone"
+          type="text"
+          class="order-call__phone__content"
+        />
+      </div>
+      <div class="order-call__info">
+        By clicking “submit”, you consent to the processing of personal data and
+        agree with our privacy policy.
+      </div>
+      <div class="order-call__send-btn order-call__send-btn--d--flex">
+        <img
+          class="order-call__btn__img order-call__btn__img--d--block"
+          title="order a call"
+          alt="order a call"
+          src="img/send_feedback_btn.png"
+        />
+      </div>
+    </div>
+    <!--- feedback modal --->
+    <div
+      id="feedback"
+      class="feedback feedback--shadow-box feedback--d--flex feedback--position--absolute"
+    >
+      <div class="feedback__header">
+        <a
+          onclick="closeFeedBack(this)"
+          href="#"
+          class="feedback__img-link feedback__img-link--d--block"
+        >
+          <img
+            class="feedback__img"
+            src="img/delete-feedback.png"
+            alt="delete-icon"
+          />
+        </a>
+      </div>
+      <div class="feedback__item">
+        <span class="feedback__vertical-line"></span>
+        <a href="#" class="feedback__btn feedback__btn--d--block">Feedback</a>
+      </div>
+      <div class="feedback__name">
+        <input placeholder="Name" type="text" class="feedback__name__content" />
+      </div>
+      <div class="feedback__phone">
+        <input
+          placeholder="Phone"
+          type="number"
+          class="feedback__phone__content"
+        />
+      </div>
+      <div class="feedback__email">
+        <input
+          placeholder="Email"
+          type="email"
+          class="feedback__email__content"
+        />
+      </div>
+      <div class="feedback__msg">
+        <input
+          placeholder="Message"
+          type="textarea"
+          class="feedback__msg__content"
+        />
+      </div>
+      <div class="feedback__info">
+        By clicking “submit”, you consent to the processing of personal data and
+        agree with our privacy policy.
+      </div>
+      <div class="feedback__send-btn feedback__send-btn--d--flex">
+        <img
+          class="feedback__btn__img feedback__btn__img--d--block"
+          title="send feedback"
+          alt="send feedback"
+          src="img/send_feedback_btn.png"
+        />
+      </div>
+    </div>
     <div
       id="container"
       class="container container--d--flex container--position--relative"
     >
-      <!--- order call modal --->
-      <div
-        id="order-call"
-        class="order-call order-call--shadow-box order-call--d--flex order-call--position--absolute"
-      >
-        <div class="order-call__header">
-          <a
-            onclick="closeOrderCall(this)"
-            href="#"
-            class="order-call__img-link order-call__img-link--d--block"
-          >
-            <img
-              class="order-call__img"
-              src="img/delete-call.png"
-              alt="delete-icon"
-            />
-          </a>
-        </div>
-        <div class="order-call__item">
-          <span class="order-call__vertical-line"></span>
-          <a href="#" class="order-call__btn order-call__btn--d--block"
-            >Order Call</a
-          >
-        </div>
-        <div class="order-call__phone">
-          <input
-            placeholder="Phone"
-            type="text"
-            class="order-call__phone__content"
-          />
-        </div>
-        <div class="order-call__info">
-          By clicking “submit”, you consent to the processing of personal data
-          and agree with our privacy policy.
-        </div>
-        <div class="order-call__send-btn order-call__send-btn--d--flex">
-          <img
-            class="order-call__btn__img order-call__btn__img--d--block"
-            title="order a call"
-            alt="order a call"
-            src="img/send_feedback_btn.png"
-          />
-        </div>
-      </div>
-      <!--- feedback modal --->
-      <div
-        id="feedback"
-        class="feedback feedback--shadow-box feedback--d--flex feedback--position--absolute"
-      >
-        <div class="feedback__header">
-          <a
-            onclick="closeFeedBack(this)"
-            href="#"
-            class="feedback__img-link feedback__img-link--d--block"
-          >
-            <img
-              class="feedback__img"
-              src="img/delete-feedback.png"
-              alt="delete-icon"
-            />
-          </a>
-        </div>
-        <div class="feedback__item">
-          <span class="feedback__vertical-line"></span>
-          <a href="#" class="feedback__btn feedback__btn--d--block">Feedback</a>
-        </div>
-        <div class="feedback__name">
-          <input
-            placeholder="Name"
-            type="text"
-            class="feedback__name__content"
-          />
-        </div>
-        <div class="feedback__phone">
-          <input
-            placeholder="Phone"
-            type="number"
-            class="feedback__phone__content"
-          />
-        </div>
-        <div class="feedback__email">
-          <input
-            placeholder="Email"
-            type="email"
-            class="feedback__email__content"
-          />
-        </div>
-        <div class="feedback__msg">
-          <input
-            placeholder="Message"
-            type="textarea"
-            class="feedback__msg__content"
-          />
-        </div>
-        <div class="feedback__info">
-          By clicking “submit”, you consent to the processing of personal data
-          and agree with our privacy policy.
-        </div>
-        <div class="feedback__send-btn feedback__send-btn--d--flex">
-          <img
-            class="feedback__btn__img feedback__btn__img--d--block"
-            title="send feedback"
-            alt="send feedback"
-            src="img/send_feedback_btn.png"
-          />
-        </div>
-      </div>
       <nav
         id="navbar"
         class="sidebar sidebar--position--absolute sidebar--shadow-box sidebar--d--flex"
@@ -464,7 +460,7 @@
                 />
               </a>
               <a
-                href="#"
+                href="#main"
                 id="about-us-link"
                 onclick="showParagraph (this)"
                 class="about-us__link about-us__link--d--block about-us__link--decoration--none about-us__link--color--black"
@@ -543,7 +539,7 @@
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
-          <a href="#" class="swiper__btn">
+          <a href="#brands" class="swiper__btn">
             <img
               class="swiper__btn__show-hide"
               id="swiper__btn__show-hide"
@@ -619,7 +615,7 @@
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
-          <a href="#" class="equipments__btn">
+          <a href="#equipments" class="equipments__btn">
             <img
               class="equipments__btn__show-hide"
               id="equipments__btn__show-hide"

@@ -28,8 +28,8 @@ export function openFeedBack() {
   document.getElementById('feedback').style.top = 0
   document.getElementById('feedback').style.right = 0
 
-  document.getElementById('main').style.opacity = 0.1
-  document.getElementById('navbar').style.opacity = 0.1
+  document.getElementById('container').style.opacity = 0.1
+  //document.getElementById('navbar').style.opacity = 0.1
 
   document.getElementById('feedback').classList.add('feedback--transition--in')
   //document.getElementById('main').classList.add('main--disable')
@@ -38,8 +38,8 @@ export function openFeedBack() {
 export function closeFeedBack() {
   document.getElementById('feedback').style.position = 'absolute'
   document.getElementById('feedback').style.right = '-1000px'
-  document.getElementById('main').style.opacity = 1
-  document.getElementById('navbar').style.opacity = 1
+  document.getElementById('container').style.opacity = 1
+  //document.getElementById('navbar').style.opacity = 1
 
   document.getElementById('feedback').classList.add('feedback--transition--out')
   //document.getElementById('main').classList.remove('main--disable')
@@ -51,8 +51,8 @@ export function openOrderCall() {
   document.getElementById('order-call').style.top = 0
   document.getElementById('order-call').style.right = 0
 
-  document.getElementById('main').style.opacity = 0.1
-  document.getElementById('navbar').style.opacity = 0.1
+  document.getElementById('container').style.opacity = 0.1
+  //document.getElementById('navbar').style.opacity = 0.1
 
   document
     .getElementById('order-call')
@@ -63,8 +63,8 @@ export function openOrderCall() {
 export function closeOrderCall() {
   document.getElementById('order-call').style.position = 'absolute'
   document.getElementById('order-call').style.right = '-1000px'
-  document.getElementById('main').style.opacity = 1
-  document.getElementById('navbar').style.opacity = 1
+  document.getElementById('container').style.opacity = 1
+  //document.getElementById('navbar').style.opacity = 1
 
   document
     .getElementById('order-call')
@@ -72,37 +72,44 @@ export function closeOrderCall() {
   //document.getElementById('main').classList.remove('main--disable')
 }
 
+let containerVal
 let mainVal
 
 //check the current mouse click value and close menues if click is on blur area
-document.getElementById('main').addEventListener('click', function (event) {
-  let windowSize = window.matchMedia('(min-width: 1024px)')
+document
+  .getElementById('container')
+  .addEventListener('click', function (event) {
+    let windowSize = window.matchMedia('(min-width: 1024px)')
 
-  mainVal = getComputedStyle(document.getElementById('main')).getPropertyValue(
-    'opacity'
-  )
+    mainVal = getComputedStyle(
+      document.getElementById('main')
+    ).getPropertyValue('opacity')
 
-  //get position values of the menus
-  let menu = getComputedStyle(
-    document.getElementById('navbar')
-  ).getPropertyValue('left')
+    containerVal = getComputedStyle(
+      document.getElementById('container')
+    ).getPropertyValue('opacity')
 
-  let call = getComputedStyle(
-    document.getElementById('order-call')
-  ).getPropertyValue('right')
+    //get position values of the menus
+    let menu = getComputedStyle(
+      document.getElementById('navbar')
+    ).getPropertyValue('left')
 
-  let feedback = getComputedStyle(
-    document.getElementById('feedback')
-  ).getPropertyValue('right')
+    let call = getComputedStyle(
+      document.getElementById('order-call')
+    ).getPropertyValue('right')
 
-  if (menu == '0px' && !windowSize.matches && mainVal == 0.1) {
-    window.closeMenu()
-  } else if (call == '0px' && mainVal == 0.1) {
-    window.closeOrderCall()
-  } else if (feedback == '0px' && mainVal == 0.1) {
-    window.closeFeedBack()
-  }
-})
+    let feedback = getComputedStyle(
+      document.getElementById('feedback')
+    ).getPropertyValue('right')
+
+    if (menu == '0px' && !windowSize.matches && mainVal == 0.1) {
+      window.closeMenu()
+    } else if (call == '0px' && containerVal == 0.1) {
+      window.closeOrderCall()
+    } else if (feedback == '0px' && containerVal == 0.1) {
+      window.closeFeedBack()
+    }
+  })
 
 //make the function global
 window.showParagraph = showParagraph
