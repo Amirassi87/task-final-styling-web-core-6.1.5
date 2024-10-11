@@ -10,8 +10,11 @@
     <title><%= htmlWebpackPlugin.options.title%></title>
   </head>
   <body>
-    <!--- Main --->
-    <div class="container container--d--flex container--position--relative">
+    <!--- container --->
+    <div
+      id="container"
+      class="container container--d--flex container--position--relative"
+    >
       <!--- order call modal --->
       <div
         id="order-call"
@@ -19,13 +22,13 @@
       >
         <div class="order-call__header">
           <a
+            onclick="closeOrderCall(this)"
             href="#"
             class="order-call__img-link order-call__img-link--d--block"
           >
             <img
-              onclick="closeOrderCall(this)"
               class="order-call__img"
-              src="img/delete.png"
+              src="img/delete-call.png"
               alt="delete-icon"
             />
           </a>
@@ -62,11 +65,14 @@
         class="feedback feedback--shadow-box feedback--d--flex feedback--position--absolute"
       >
         <div class="feedback__header">
-          <a href="#" class="feedback__img-link feedback__img-link--d--block">
+          <a
+            onclick="closeFeedBack(this)"
+            href="#"
+            class="feedback__img-link feedback__img-link--d--block"
+          >
             <img
-              onclick="closeFeedBack(this)"
               class="feedback__img"
-              src="img/delete.png"
+              src="img/delete-feedback.png"
               alt="delete-icon"
             />
           </a>
@@ -121,11 +127,14 @@
         class="sidebar sidebar--position--absolute sidebar--shadow-box sidebar--d--flex"
       >
         <div class="sidebar__header sidebar__header--d--flex">
-          <a href="#" class="sidebar__img-link sidebar__img-link--d--block">
+          <a
+            onclick="closeMenu(this)"
+            href="#"
+            class="sidebar__img-link sidebar__img-link--d--block"
+          >
             <img
-              onclick="closeMenu(this)"
               class="sidebar__img"
-              src="img/delete.png"
+              src="img/delete-menu.png"
               alt="delete-icon"
             />
           </a>
@@ -227,24 +236,18 @@
         <div class="sidebar__footer sidebar__footer--d--flex">
           <div class="sidebar__icons sidebar__icons--d--flex">
             <a
+              onclick="openOrderCall(this)"
               class="sidebar__icons-link sidebar__icons-link--d--block"
               href="#"
             >
-              <img
-                onclick="openOrderCall(this)"
-                src="img/call.png"
-                alt="call-icon"
-              />
+              <img src="img/call.png" alt="call-icon" />
             </a>
             <a
+              onclick="openFeedBack(this)"
               class="sidebar__icons-link sidebar__icons-link--d--block"
               href="#"
             >
-              <img
-                onclick="openFeedBack(this)"
-                src="img/chat.png"
-                alt="chat-icon"
-              />
+              <img src="img/chat.png" alt="chat-icon" />
             </a>
             <a
               class="sidebar__icons-link sidebar__icons-link--d--block"
@@ -267,13 +270,11 @@
           <div
             class="header__menu header__menu--d--flex header__menu--bg-color--white"
           >
-            <a class="header__icon header__icon--display--block">
-              <img
-                onclick="openMenu(this)"
-                class="header__img"
-                src="img/bar.png"
-                alt="bar"
-              />
+            <a
+              onclick="openMenu(this)"
+              class="header__icon header__icon--display--block"
+            >
+              <img class="header__img" src="img/bar-header.png" alt="bar" />
             </a>
             <div class="header__vertical-line"></div>
             <a
@@ -337,31 +338,37 @@
                 />
               </svg>
             </a>
-            <a class="header__icon header__icon--d--block">
-              <img
-                class="header__img"
-                onclick="openOrderCall(this)"
-                src="img/call.png"
-                alt="bar"
-              />
+            <a
+              onclick="openOrderCall(this)"
+              class="header__icon header__icon--d--block"
+            >
+              <img class="header__img" src="img/call-header.png" alt="bar" />
             </a>
-            <a class="header__icon header__icon--d--block">
-              <img
-                onclick="openFeedBack(this)"
-                class="header__img"
-                src="img/chat.png"
-                alt="bar"
-              />
+            <a
+              onclick="openFeedBack(this)"
+              class="header__icon header__icon--d--block"
+            >
+              <img class="header__img" src="img/chat-header.png" alt="bar" />
             </a>
             <a class="header__icon header__icon--d--block">
               <img class="header__img" src="img/profile.png" alt="bar" />
             </a>
             <div class="header__vertical-line"></div>
-            <a class="header__icon header__icon--d--block">
-              <img class="header__img" src="img/repair.png" alt="bar" />
+            <a
+              onclick="openOrderCall(this)"
+              class="header__icon header__icon--d--block"
+            >
+              <img class="header__img" src="img/repair_header.png" alt="bar" />
             </a>
-            <a class="header__icon header__icon--d--block">
-              <img class="header__img" src="img/check-status.png" alt="bar" />
+            <a
+              onclick="openFeedBack(this)"
+              class="header__icon header__icon--d--block"
+            >
+              <img
+                class="header__img"
+                src="img/check-status-header.png"
+                alt="bar"
+              />
             </a>
           </div>
         </header>
@@ -373,18 +380,24 @@
             <h1 class="services_head">Services</h1>
             <div class="services__icons services__icons--d--flex">
               <p>Submit a Request</p>
-              <a class="services__icons services__icons--d--block">
+              <a
+                onclick="openOrderCall(this)"
+                class="services__icons services__icons--d--block"
+              >
                 <img
                   class="services-icons__img"
-                  src="img/repair.png"
+                  src="img/repair-s.png"
                   alt="bar"
                 />
               </a>
               <p>Repair Status</p>
-              <a class="services__icons services__icons--d--block">
+              <a
+                onclick="openFeedBack(this)"
+                class="services__icons services__icons--d--block"
+              >
                 <img
                   class="services-icons__img"
-                  src="img/check-status.png"
+                  src="img/check-status-ser.png"
                   alt="bar"
                 />
               </a>

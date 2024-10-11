@@ -15,7 +15,7 @@
 
 body {
   max-width: 480px;
-  height: auto;
+  height: 100%;
   font-family: 'Roboto', sans-serif;
   background-color: $body_bgColor;
   margin: 0;
@@ -28,25 +28,23 @@ body {
   body {
     max-width: 100%;
     min-width: 481px;
-    height: auto;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: $body_bgColor;
     margin: 0;
     padding: 0;
-    overflow-y: auto;
+    //overflow-y: auto;
     overflow-x: hidden;
   }
 }
 
 @media screen and (min-width: 1024px) {
   body {
-    //max-width: 100%;
-    //margin: 100px;
+    max-width: 100%;
     min-width: 1024px;
-    height: auto;
+    height: 100vh;
     font-family: 'Roboto', sans-serif;
     background-color: $body_bgColor;
-    //padding: 0;
     overflow-y: auto;
     overflow-x: hidden;
   }

@@ -1,6 +1,17 @@
 /* Container */
 
+.main {
+  &--disable {
+    pointer-events: none;
+  }
+}
+
 @media screen and (min-width: 481px) and (max-width: 1023px) {
+  .main {
+    &--disable {
+      pointer-events: none;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -8,5 +19,9 @@
     position: absolute;
     left: 320px;
     overflow-x: hidden;
+
+    &--disable {
+      pointer-events: none;
+    }
   }
 }

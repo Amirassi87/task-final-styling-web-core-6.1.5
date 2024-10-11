@@ -1,9 +1,9 @@
 .sidebar {
   width: 100%;
-  height: auto;
+  height: 100vh;
   background-color: #ffffff;
   overflow-y: auto;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 
   &--transition--in {
     transition: ease 1s;
@@ -165,7 +165,7 @@
 @media screen and (min-width: 481px) and (max-width: 1023px) {
   .sidebar {
     width: 320px;
-    height: auto;
+    height: 100vh;
     background-color: #ffffff;
     overflow-y: auto;
     overflow-x: hidden;
@@ -327,6 +327,7 @@
 @media screen and (min-width: 1024px) {
   .sidebar {
     width: 320px;
+    height: auto;
     background-color: #ffffff;
     overflow-y: auto;
 
@@ -334,6 +335,7 @@
       position: absolute;
       left: 0;
       top: 0;
+      z-index: 20;
     }
 
     &--d--flex {
@@ -462,7 +464,6 @@
 
     &__lang {
       margin-top: 2.5em;
-      //margin-bottom: 2em;
     }
 
     &__link {

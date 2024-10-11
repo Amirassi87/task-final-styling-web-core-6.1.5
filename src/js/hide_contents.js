@@ -11,6 +11,7 @@ export function openMenu() {
   document.getElementById('main').style.opacity = 0.1
 
   document.getElementById('navbar').classList.add('sidebar--transition--in')
+  //document.getElementById('main').classList.add('main--disable')
 }
 
 export function closeMenu() {
@@ -18,6 +19,7 @@ export function closeMenu() {
   document.getElementById('navbar').style.left = '-1000px'
   document.getElementById('main').style.opacity = 1
   document.getElementById('navbar').classList.add('sidebar--transition--out')
+  //document.getElementById('main').classList.remove('main--disable')
 }
 
 export function openFeedBack() {
@@ -30,6 +32,7 @@ export function openFeedBack() {
   document.getElementById('navbar').style.opacity = 0.1
 
   document.getElementById('feedback').classList.add('feedback--transition--in')
+  //document.getElementById('main').classList.add('main--disable')
 }
 
 export function closeFeedBack() {
@@ -39,11 +42,12 @@ export function closeFeedBack() {
   document.getElementById('navbar').style.opacity = 1
 
   document.getElementById('feedback').classList.add('feedback--transition--out')
+  //document.getElementById('main').classList.remove('main--disable')
 }
 
 export function openOrderCall() {
   document.getElementById('order-call').style.position = 'absolute'
-  document.getElementById('order-call').style.zIndex = 30
+  document.getElementById('order-call').style.zIndex = 20
   document.getElementById('order-call').style.top = 0
   document.getElementById('order-call').style.right = 0
 
@@ -53,6 +57,7 @@ export function openOrderCall() {
   document
     .getElementById('order-call')
     .classList.add('order-call--transition--in')
+  //document.getElementById('main').classList.add('main--disable')
 }
 
 export function closeOrderCall() {
@@ -64,10 +69,20 @@ export function closeOrderCall() {
   document
     .getElementById('order-call')
     .classList.add('order-call--transition--out')
+  //document.getElementById('main').classList.remove('main--disable')
 }
 
+let mainVal
+
 //check the current mouse click value and close menues if click is on blur area
-window.addEventListener('click', function (event) {
+document.getElementById('main').addEventListener('click', function (event) {
+  let windowSize = window.matchMedia('(min-width: 1024px)')
+
+  mainVal = getComputedStyle(document.getElementById('main')).getPropertyValue(
+    'opacity'
+  )
+
+  //get position values of the menus
   let menu = getComputedStyle(
     document.getElementById('navbar')
   ).getPropertyValue('left')
@@ -80,31 +95,14 @@ window.addEventListener('click', function (event) {
     document.getElementById('feedback')
   ).getPropertyValue('right')
 
-  if (menu == '0px') {
+  if (menu == '0px' && !windowSize.matches && mainVal == 0.1) {
     window.closeMenu()
-  } else if (call == '0px') {
+  } else if (call == '0px' && mainVal == 0.1) {
     window.closeOrderCall()
-  } else if (feedback == '0px') {
+  } else if (feedback == '0px' && mainVal == 0.1) {
     window.closeFeedBack()
   }
 })
-
-//fix the sidebar menu in desktop size windows only
-// export function changeSidebarPos(windowSize) {
-//   if (windowSize.matches) {
-//     document.getElementById('navbar').style.position = 'static'
-//   } else {
-//     document.getElementById('navbar').style.position = 'absolute'
-//   }
-// }
-
-// let windowSize = window.matchMedia('(min-width: 1024px)')
-
-// changeSidebarPos(windowSize)
-
-// windowSize.addEventListener('change', function () {
-//   changeSidebarPos(windowSize)
-// })
 
 //make the function global
 window.showParagraph = showParagraph
@@ -114,4 +112,3 @@ window.openFeedBack = openFeedBack
 window.closeFeedBack = closeFeedBack
 window.openOrderCall = openOrderCall
 window.closeOrderCall = closeOrderCall
-// window.changeSidebarPos = changeSidebarPos
