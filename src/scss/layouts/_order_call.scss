@@ -1,11 +1,9 @@
 /* Order Call */
 
 .order-call {
-  width: 100%;
+  width: 320px;
   height: 100%;
-  overflow-y: hidden;
   overflow-x: hidden;
-
   background-color: $bgColor;
 
   &--shadow-box {
@@ -138,8 +136,6 @@
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-
-    //overflow-y: auto;
     background-color: $bgColor;
 
     &--shadow-box {

@@ -114,10 +114,12 @@
         />
       </div>
     </div>
+    <!--- container section --->
     <div
       id="container"
       class="container container--d--flex container--position--relative"
     >
+      <!--- navbar section --->
       <nav
         id="navbar"
         class="sidebar sidebar--position--absolute sidebar--shadow-box sidebar--d--flex"
@@ -260,6 +262,7 @@
           </div>
         </div>
       </nav>
+      <!--- main section --->
       <main class="main" id="main">
         <!--- header --->
         <header class="header header--border--bottom">
@@ -454,6 +457,7 @@
             <div class="about-us__read-more about-us__read-more--d--flex">
               <a href="#"
                 ><img
+                  id="about-us__img"
                   class="about-us__img about-us__img--d--block"
                   src="img/read-more.png"
                   alt="read more"
@@ -462,7 +466,7 @@
               <a
                 href="#main"
                 id="about-us-link"
-                onclick="showParagraph (this)"
+                onclick="toggleParagraph (this)"
                 class="about-us__link about-us__link--d--block about-us__link--decoration--none about-us__link--color--black"
                 >Read more</a
               >

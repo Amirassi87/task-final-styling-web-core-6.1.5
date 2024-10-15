@@ -1,6 +1,21 @@
-export function showParagraph() {
-  document.getElementById('about-us__second-part').style.position = 'static'
-  document.getElementById('about-us__third-part').style.position = 'static'
+export function toggleParagraph() {
+  let second_part = getComputedStyle(
+    document.getElementById('about-us__second-part')
+  ).getPropertyValue('position')
+
+  if (second_part == 'fixed') {
+    document.getElementById('about-us__second-part').style.position = 'static'
+    document.getElementById('about-us__third-part').style.position = 'static'
+    document.getElementById('about-us__img').src = 'img/read-less.png'
+    document.getElementById('about-us-link').innerText = 'Read Less'
+  } else if (second_part == 'static') {
+    document.getElementById('about-us__second-part').style.position = 'fixed'
+    document.getElementById('about-us__second-part').style.left = '-1000px'
+    document.getElementById('about-us__third-part').style.position = 'fixed'
+    document.getElementById('about-us__third-part').style.left = '-1000px'
+    document.getElementById('about-us__img').src = 'img/read-more.png'
+    document.getElementById('about-us-link').innerText = 'Read More'
+  }
 }
 
 export function openMenu() {
@@ -69,13 +84,11 @@ export function closeOrderCall() {
   document
     .getElementById('order-call')
     .classList.add('order-call--transition--out')
-  //document.getElementById('main').classList.remove('main--disable')
 }
 
 let containerVal
 let mainVal
 
-//check the current mouse click value and close menues if click is on blur area
 document
   .getElementById('container')
   .addEventListener('click', function (event) {
@@ -89,7 +102,6 @@ document
       document.getElementById('container')
     ).getPropertyValue('opacity')
 
-    //get position values of the menus
     let menu = getComputedStyle(
       document.getElementById('navbar')
     ).getPropertyValue('left')
@@ -112,7 +124,7 @@ document
   })
 
 //make the function global
-window.showParagraph = showParagraph
+window.toggleParagraph = toggleParagraph
 window.openMenu = openMenu
 window.closeMenu = closeMenu
 window.openFeedBack = openFeedBack

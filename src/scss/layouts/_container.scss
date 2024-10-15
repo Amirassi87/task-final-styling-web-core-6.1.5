@@ -1,7 +1,8 @@
 /* Container */
 .container {
-  height: 100vh;
+  height: auto;
   width: 100vw;
+  box-sizing: border-box;
 
   & &--position--relative {
     position: relative;
@@ -11,7 +12,9 @@
 
 @media screen and (min-width: 481px) and (max-width: 1023px) {
   .container {
-    height: 100vh;
+    height: auto;
+    box-sizing: border-box;
+    width: 100vw;
 
     & &--position--relative {
       position: relative;
@@ -21,7 +24,9 @@
 
 @media screen and (min-width: 1024px) {
   .container {
-    height: 100vh;
+    height: 100%;
+    width: 100vw;
+    //margin: 0.2em;
 
     & &--d--flex {
       display: flex;

@@ -16,7 +16,7 @@
     }
 
     &--bg-color--white {
-      background-color: #ffffff;
+      background-color: $bgColor;
     }
   }
 
@@ -47,6 +47,8 @@
 }
 @media screen and (min-width: 481px) and (max-width: 1023px) {
   .header {
+    margin-left: 0.5em;
+    margin-right: 1em;
     &__menu {
       width: 100%;
       height: 88px;
