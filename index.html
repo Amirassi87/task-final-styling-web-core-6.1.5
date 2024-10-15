@@ -61,7 +61,9 @@
         <img class="feedback__btn__img feedback__btn__img--d--block" title="send feedback" alt="send feedback" src="img/send_feedback_btn.png">
       </div>
     </div>
+    
     <div id="container" class="container container--d--flex container--position--relative">
+      
       <nav id="navbar" class="sidebar sidebar--position--absolute sidebar--shadow-box sidebar--d--flex">
         <div class="sidebar__header sidebar__header--d--flex">
           <a onclick="closeMenu(this)" href="#" class="sidebar__img-link sidebar__img-link--d--block">
@@ -115,6 +117,7 @@
           </div>
         </div>
       </nav>
+      
       <main class="main" id="main">
         
         <header class="header header--border--bottom">
@@ -196,9 +199,9 @@
               </span>
             </p>
             <div class="about-us__read-more about-us__read-more--d--flex">
-              <a href="#"><img class="about-us__img about-us__img--d--block" src="img/read-more.png" alt="read more">
+              <a href="#"><img id="about-us__img" class="about-us__img about-us__img--d--block" src="img/read-more.png" alt="read more">
               </a>
-              <a href="#main" id="about-us-link" onclick="showParagraph (this)" class="about-us__link about-us__link--d--block about-us__link--decoration--none about-us__link--color--black">Read more</a>
+              <a href="#main" id="about-us-link" onclick="toggleParagraph (this)" class="about-us__link about-us__link--d--block about-us__link--decoration--none about-us__link--color--black">Read more</a>
             </div>
           </div>
           <img class="about-us__company-img about-us__company-img--d--block" src="img/company-img.png" alt="company image">
