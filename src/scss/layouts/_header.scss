@@ -45,17 +45,23 @@
     }
   }
 }
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1119px) {
   .header {
-    margin-left: 0.5em;
-    margin-right: 1em;
+    //margin-left: 0.5em;
+    width: 100vw;
+    //padding-right: 1em;
+    //margin-right: 1em;
+    box-sizing: border-box;
     &__menu {
-      width: 100%;
+      //width: 100vw;
       height: 88px;
+      //padding: 0.5em;
+      // padding-right: 3em;
     }
 
     &__icon {
       margin: 0.5em;
+      padding-right: 1em;
 
       &--d--flex--grow--5 {
         flex-grow: 5;
@@ -83,7 +89,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
   .header {
     position: fixed;
     left: -1000px;

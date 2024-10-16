@@ -1,8 +1,9 @@
 .sidebar {
-  width: 100%;
-  height: 100%;
-  background-color: $bgColor;
+  width: 320px;
+  height: 100vh;
+  overflow-y: auto;
   overflow-x: hidden;
+  background-color: $bgColor;
 
   &--transition--in {
     transition: ease 1s;
@@ -161,12 +162,14 @@
 }
 
 /* tablet */
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1119px) {
   .sidebar {
     width: 320px;
-    height: auto;
-    background-color: #ffffff;
+    height: 100vh;
+    overflow-y: auto;
     overflow-x: hidden;
+
+    background-color: #ffffff;
 
     &--shadow-box {
       box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2),
@@ -254,7 +257,7 @@
 
     &__footer {
       padding-left: 2.1em;
-      margin-top: 60em;
+      margin-top: 10em;
     }
 
     &__icons-link--block {
@@ -322,10 +325,12 @@
   }
 }
 /* desktop */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
   .sidebar {
     width: 300px;
     height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: $bgColor;
 
     &--position--absolute {

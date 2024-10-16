@@ -37,6 +37,7 @@
     padding-bottom: 2em;
     margin-top: 2em;
     margin-left: 1em;
+    margin-right: 1em;
   }
 
   &__btn {
@@ -72,10 +73,21 @@
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1119px) {
+  .services {
+    &__slide-menu--d--flex {
+      display: flex;
+      overflow-x: auto;
+      column-gap: 2em;
+      padding-bottom: 2em;
+      margin-top: 2em;
+      margin-left: 1em;
+      margin-right: 3em;
+    }
+  }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
   .services {
     &__title--d--flex {
       display: flex;

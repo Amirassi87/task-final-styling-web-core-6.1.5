@@ -1,3 +1,10 @@
+let desktopSize = window.matchMedia('(min-width: 1120px)')
+let minTabletSize = window.matchMedia('(min-width: 768px)')
+let maxTabletSize = window.matchMedia('(max-width: 1119px)')
+let mobileSize = window.matchMedia('(max-width: 767px)')
+let containerVal
+let mainVal
+
 export function toggleParagraph() {
   let second_part = getComputedStyle(
     document.getElementById('about-us__second-part')
@@ -23,10 +30,13 @@ export function openMenu() {
   document.getElementById('navbar').style.zIndex = 10
   document.getElementById('navbar').style.top = 0
   document.getElementById('navbar').style.left = 0
+  document.getElementById('navbar').style.bottom = 0
   document.getElementById('main').style.opacity = 0.1
-
   document.getElementById('navbar').classList.add('sidebar--transition--in')
-  //document.getElementById('main').classList.add('main--disable')
+
+  if (minTabletSize.matches || maxTabletSize.matches || mobileSize.matches) {
+    document.getElementById('html_content').style.overflowY = 'hidden'
+  }
 }
 
 export function closeMenu() {
@@ -34,7 +44,7 @@ export function closeMenu() {
   document.getElementById('navbar').style.left = '-1000px'
   document.getElementById('main').style.opacity = 1
   document.getElementById('navbar').classList.add('sidebar--transition--out')
-  //document.getElementById('main').classList.remove('main--disable')
+  document.getElementById('html_content').style.overflowY = 'auto'
 }
 
 export function openFeedBack() {
@@ -42,22 +52,20 @@ export function openFeedBack() {
   document.getElementById('feedback').style.zIndex = 30
   document.getElementById('feedback').style.top = 0
   document.getElementById('feedback').style.right = 0
-
   document.getElementById('container').style.opacity = 0.1
-  //document.getElementById('navbar').style.opacity = 0.1
-
   document.getElementById('feedback').classList.add('feedback--transition--in')
-  //document.getElementById('main').classList.add('main--disable')
+
+  if (minTabletSize.matches || maxTabletSize.matches || mobileSize.matches) {
+    document.getElementById('html_content').style.overflowY = 'hidden'
+  }
 }
 
 export function closeFeedBack() {
   document.getElementById('feedback').style.position = 'absolute'
   document.getElementById('feedback').style.right = '-1000px'
   document.getElementById('container').style.opacity = 1
-  //document.getElementById('navbar').style.opacity = 1
-
   document.getElementById('feedback').classList.add('feedback--transition--out')
-  //document.getElementById('main').classList.remove('main--disable')
+  document.getElementById('html_content').style.overflowY = 'auto'
 }
 
 export function openOrderCall() {
@@ -65,34 +73,30 @@ export function openOrderCall() {
   document.getElementById('order-call').style.zIndex = 20
   document.getElementById('order-call').style.top = 0
   document.getElementById('order-call').style.right = 0
-
   document.getElementById('container').style.opacity = 0.1
-  //document.getElementById('navbar').style.opacity = 0.1
-
   document
     .getElementById('order-call')
     .classList.add('order-call--transition--in')
-  //document.getElementById('main').classList.add('main--disable')
+
+  if (minTabletSize.matches || maxTabletSize.matches || mobileSize.matches) {
+    document.getElementById('html_content').style.overflowY = 'hidden'
+  }
 }
 
 export function closeOrderCall() {
   document.getElementById('order-call').style.position = 'absolute'
   document.getElementById('order-call').style.right = '-1000px'
   document.getElementById('container').style.opacity = 1
-  //document.getElementById('navbar').style.opacity = 1
-
   document
     .getElementById('order-call')
     .classList.add('order-call--transition--out')
+  document.getElementById('html_content').style.overflowY = 'auto'
 }
-
-let containerVal
-let mainVal
 
 document
   .getElementById('container')
   .addEventListener('click', function (event) {
-    let windowSize = window.matchMedia('(min-width: 1024px)')
+    let windowSize = window.matchMedia('(min-width: 1120px)')
 
     mainVal = getComputedStyle(
       document.getElementById('main')

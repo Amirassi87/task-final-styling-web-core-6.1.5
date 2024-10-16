@@ -3,7 +3,9 @@
 .order-call {
   width: 320px;
   height: 100%;
+  overflow-y: auto;
   overflow-x: hidden;
+
   background-color: $bgColor;
 
   &--shadow-box {
@@ -130,7 +132,7 @@
 }
 
 /* tablet */
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1119px) {
   .order-call {
     width: 350px;
     height: 100vh;
@@ -211,11 +213,12 @@
 }
 
 /* desktop */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
   .order-call {
     width: 350px;
     height: 100%;
-    overflow-y: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: $bgColor;
 
     &--shadow-box {

@@ -1,19 +1,24 @@
 /* Container */
 
 .main {
+  overflow-y: auto;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1119px) {
   .main {
+    overflow-y: auto;
+    overflow-x: hidden;
     box-sizing: border-box;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
   .main {
     position: absolute;
     left: 300px;
+    overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
 

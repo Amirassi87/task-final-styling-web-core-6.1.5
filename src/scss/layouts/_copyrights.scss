@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1119px) {
   .footer {
     font-size: 0.8rem !important;
     color: $components_bgColor;
@@ -46,7 +46,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1120px) {
   .footer {
     font-size: 0.8rem !important;
     color: $components_bgColor;
