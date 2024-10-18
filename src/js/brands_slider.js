@@ -36,13 +36,45 @@ windowSize.addEventListener('change', function () {
 //check the height value of the swiper block and show/hide brand images according to height value retrieved
 export function showHide() {
   const checkHeight = document.getElementById('br_swiper').style.height
+  let windowBrSize = window.matchMedia('(min-width: 1896px)')
+  let checkBtn = document.getElementById('equipments__btn__show-hide').src
+
+  let btnVal = 'http://' + location.host + '/img/hide.png'
 
   if (checkHeight == 'auto') {
     document.getElementById('br_swiper').style.height = '11.875em'
     document.getElementById('swiper__btn__show-hide').src = 'img/ReadMore.png'
+
+    if (checkBtn == btnVal) {
+      if (windowBrSize.matches) {
+        document.getElementById('nav-footer').style.marginTop = '75em'
+      } else {
+        document.getElementById('nav-footer').style.marginTop = '85em'
+      }
+    } else {
+      if (windowBrSize.matches) {
+        document.getElementById('nav-footer').style.marginTop = '65em'
+      } else {
+        document.getElementById('nav-footer').style.marginTop = '65em'
+      }
+    }
   } else {
     document.getElementById('br_swiper').style.height = 'auto'
     document.getElementById('swiper__btn__show-hide').src = 'img/hide.png'
+
+    if (checkBtn == btnVal) {
+      if (windowBrSize.matches) {
+        document.getElementById('nav-footer').style.marginTop = '75em'
+      } else {
+        document.getElementById('nav-footer').style.marginTop = '90em'
+      }
+    } else {
+      if (windowBrSize.matches) {
+        document.getElementById('nav-footer').style.marginTop = '65em'
+      } else {
+        document.getElementById('nav-footer').style.marginTop = '70em'
+      }
+    }
   }
 }
 

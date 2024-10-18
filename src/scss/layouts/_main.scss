@@ -18,12 +18,13 @@
   .main {
     position: absolute;
     left: 300px;
+    height: auto;
     overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
+    //max-height: 100%;
 
-    &--disable {
-      pointer-events: none;
-    }
+    margin: 0;
+    padding: 0;
   }
 }

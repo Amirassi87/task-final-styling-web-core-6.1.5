@@ -20,6 +20,7 @@
   &--d--flex {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1.5em;
   }
 
@@ -130,6 +131,7 @@
 
   &__footer {
     padding-left: 2.1em;
+    //margin-top: 20em;
 
     &--d--flex {
       display: flex;
@@ -332,11 +334,13 @@
     overflow-y: auto;
     overflow-x: hidden;
     background-color: $bgColor;
+    box-sizing: border-box;
 
     &--position--absolute {
       position: absolute;
       left: 0;
       top: 0;
+      //bottom: 0;
       z-index: 20;
     }
 
@@ -421,7 +425,8 @@
 
     &__footer {
       padding-left: 2.1em;
-      margin-top: 60em;
+      //margin-top: 60em;
+      margin-top: 65em;
     }
 
     &__icons-link--block {

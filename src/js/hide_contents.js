@@ -4,7 +4,21 @@ let maxTabletSize = window.matchMedia('(max-width: 1119px)')
 let mobileSize = window.matchMedia('(max-width: 767px)')
 let containerVal
 let mainVal
+let scrollHeight = Math.max(
+  document.body.scrollHeight,
+  document.documentElement.scrollHeight,
+  document.body.offsetHeight,
+  document.documentElement.offsetHeight,
+  document.body.clientHeight,
+  document.documentElement.clientHeight
+)
 
+console.log(scrollHeight)
+console.log(desktopSize)
+
+if (desktopSize.matches) {
+  document.getElementById('navbar').style.height = scrollHeight
+}
 export function toggleParagraph() {
   let second_part = getComputedStyle(
     document.getElementById('about-us__second-part')

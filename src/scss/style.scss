@@ -62,7 +62,8 @@ body {
 @media screen and (min-width: 1120px) {
   html {
     width: 100vw;
-    height: 100vh;
+    //height: 100vh;
+    //min-height: 600px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
