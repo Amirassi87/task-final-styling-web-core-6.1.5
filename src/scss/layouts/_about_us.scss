@@ -2,6 +2,7 @@
 
 .about-us {
   &__intro {
+    width: 100%;
     padding: 0.5em;
   }
   &--d--flex {
@@ -56,13 +57,14 @@
       color: text_color;
     }
   }
+  &__img-block {
+    &__company-img {
+      width: 100%;
+      height: auto;
 
-  &__company-img {
-    width: 100%;
-    height: auto;
-
-    &--d--block {
-      display: block;
+      &--d--block {
+        display: block;
+      }
     }
   }
 }
@@ -74,6 +76,10 @@
       flex-direction: row;
       justify-content: space-between;
       padding-bottom: 1.5em;
+    }
+
+    &__intro {
+      width: 50%;
     }
 
     &__first-part {
@@ -94,10 +100,14 @@
       font-weight: bold;
       vertical-align: middle;
     }
-    &__company-img {
+    &__img-block {
       width: 50%;
-      height: 50%;
-      padding-right: 1.5em;
+
+      &__company-img {
+        width: 100%;
+        height: auto;
+        padding-right: 1.5em;
+      }
     }
   }
 }
@@ -137,10 +147,12 @@
     }
 
     &__img-block {
+      width: 50%;
+
       &__company-img {
-        width: 80%;
-        height: 80%;
-        //padding-right: 1.5em;
+        width: 100%;
+        height: auto;
+        padding-right: 1.5em;
       }
     }
   }
