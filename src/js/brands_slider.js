@@ -36,7 +36,11 @@ windowSize.addEventListener('change', function () {
 //check the height value of the swiper block and show/hide brand images according to height value retrieved
 export function showHide() {
   const checkHeight = document.getElementById('br_swiper').style.height
-  let windowBrSize = window.matchMedia('(min-width: 1896px)')
+  let windowEqSize = window.matchMedia(
+    '(min-width: 1896px) and (max-width: 2559px)'
+  )
+  let windowBrSize = window.matchMedia('(min-width: 2560px)')
+
   let checkBtn = document.getElementById('equipments__btn__show-hide').src
 
   let btnVal = 'http://' + location.host + '/img/hide.png'
@@ -48,11 +52,15 @@ export function showHide() {
     if (checkBtn == btnVal) {
       if (windowBrSize.matches) {
         document.getElementById('nav-footer').style.marginTop = '75em'
+      } else if (windowBrSize.matches) {
+        document.getElementById('nav-footer').style.marginTop = '65em'
       } else {
         document.getElementById('nav-footer').style.marginTop = '85em'
       }
     } else {
       if (windowBrSize.matches) {
+        document.getElementById('nav-footer').style.marginTop = '80em'
+      } else if (windowBrSize.matches) {
         document.getElementById('nav-footer').style.marginTop = '65em'
       } else {
         document.getElementById('nav-footer').style.marginTop = '65em'
@@ -65,11 +73,15 @@ export function showHide() {
     if (checkBtn == btnVal) {
       if (windowBrSize.matches) {
         document.getElementById('nav-footer').style.marginTop = '75em'
+      } else if (windowBrSize.matches) {
+        document.getElementById('nav-footer').style.marginTop = '65em'
       } else {
         document.getElementById('nav-footer').style.marginTop = '90em'
       }
     } else {
       if (windowBrSize.matches) {
+        document.getElementById('nav-footer').style.marginTop = '80em'
+      } else if (windowBrSize.matches) {
         document.getElementById('nav-footer').style.marginTop = '65em'
       } else {
         document.getElementById('nav-footer').style.marginTop = '70em'
